@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandTextView">
+        <attr name="titleText" format="reference|string" />
+        <attr name="contentText" format="reference|string" />
+        <attr name="foldHint" format="reference|string" />
+        <attr name="expandHint" format="reference|string" />
+        <attr name="textTitleColor" format="reference|color" />
+        <attr name="textContentColor" format="reference|color" />
+        <attr name="textHintColor" format="reference|color" />
+        <attr name="indicateImage" format="reference" />
+        <attr name="minVisibleLines" format="integer" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="contentTextSize" format="dimension" />
+        <attr name="hintTextSize" format="dimension" />
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+</resources>
