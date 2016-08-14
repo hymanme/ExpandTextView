@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 version = "1.0.0"
@@ -26,9 +27,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.0'
 }
 
-def siteUrl = 'https://github.com/hymanme/BounceProgressBar' // 项目的主页
-def gitUrl = 'https://github.com/hymanme/BounceProgressBar.git' // Git仓库的url
-group = "org.rocko.bpb" // Maven Group ID for the artifact，一般填你唯一的包名
+def siteUrl = 'https://github.com/Hymanme/ExpandTextView' // 项目的主页
+def gitUrl = 'https://github.com/Hymanme/ExpandTextView.git' // Git仓库的url
+group = "com.hymane.expandtextview" // Maven Group ID for the artifact，一般填你唯一的包名
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
@@ -66,6 +67,7 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
@@ -85,10 +87,11 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "BounceProgressBar"    //发布到JCenter上的项目名字
+        name = "ExpandTextView"    //发布到JCenter上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
     }
 }
+apply plugin: 'maven'

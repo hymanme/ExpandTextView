@@ -23,7 +23,7 @@ import com.hymane.expandtextview.utils.DensityUtils;
  * Author   :hymanme
  * Email    :hymanme@163.com
  * Create at 2016/8/12
- * Description:
+ * Description: 可折叠的textview控件，点击下拉按钮可展开textview全部内容，再次点击收回。
  */
 public class ExpandTextView extends LinearLayout implements View.OnClickListener {
     public static final String TAG = "ExpandTextView";
@@ -110,6 +110,9 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
         init();
     }
 
+    /**
+     * 初始化
+     */
     private void init() {
         View.inflate(mContext, R.layout.expand_text_view, this);
         mTitleView = (TextView) findViewById(R.id.tv_title);
@@ -299,6 +302,8 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
 
     /**
      * 获取TextView最大高度
+     *
+     * @return int 最大测量高度
      */
     public int getMaxMeasureHeight() {
         int width = mContentView.getMeasuredWidth();
@@ -310,6 +315,8 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
 
     /**
      * 获取TextView最小高度
+     *
+     * @return int 最小测量高度
      */
     public int getMinMeasureHeight() {
         if (copy == null) {
@@ -325,6 +332,9 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
         return copy.getMeasuredHeight();
     }
 
+    /**
+     * 折叠和展开
+     */
     private void expand() {
         int startHeight;
         int targetHeight;
