@@ -4,6 +4,13 @@
 ![image](https://github.com/Hymanme/ExpandTextView/raw/master/screenshots/show.gif)
 
 #How to use
+Add this to your build.gradle:
+ 
+```
+dependencies {
+  compile 'com.hymane.expandtextview:library:1.0.0'
+}
+```
 
 #### 定义xml布局
 		<com.hymane.expandtextview.ExpandTextView
