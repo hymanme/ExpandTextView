@@ -106,6 +106,6 @@ dependencies {
     /**
      * 设置监听
      *
-     * @param mListener 展开搜索按钮点击时回调
+     * @param mListener 展开和收缩按钮点击时回调
      */
     public void setOnReadMoreListener(OnReadMoreClickListener mListener);
