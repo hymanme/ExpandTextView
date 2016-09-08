@@ -3,16 +3,20 @@
 
 ![image](https://github.com/Hymanme/ExpandTextView/raw/master/screenshots/show.gif)
 
-#How to use
+![night](http://ww4.sinaimg.cn/mw690/005X6W83gw1f7lyq9c0slj30c00lc0u3.jpg)
+
+##How to use
 Add this to your build.gradle:
  
 ```
-dependencies {
-  compile 'com.hymane.expandtextview:library:1.0.0'
-}
+	dependencies {
+	  compile 'com.hymane.expandtextview:library:1.0.1'
+	}
 ```
-
-#### 定义xml布局
+## 更新日志
+	2. 兼容夜间模式,字体颜色请使用主题对应的颜色
+	1. 初版  
+## 定义xml布局
 		<com.hymane.expandtextview.ExpandTextView
             android:id="@+id/etv"
             android:layout_width="match_parent"
@@ -24,11 +28,13 @@ dependencies {
             app:contentTextSize="14sp"
             app:expandHint="点击展开"
             app:foldHint="点击收回"
-            app:indicateImage="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:textContentColor="?android:attr/textColorPrimary"
+            app:textHintColor="?android:attr/textColorPrimary"
+            app:textTitleColor="?android:attr/textColorSecondary"
             app:titleText="标题党"
             app:titleTextSize="16sp">
 
-####自定义设置
+##自定义设置
 
 ```Java
 	etv.setIndicateImage(R.drawable.ic_arrow_down_light_round);
@@ -51,7 +57,7 @@ dependencies {
         });
 ```
 
-####可选项
+##可选项
 
     //设置标题
     public void setTitle(String title);
@@ -67,7 +73,7 @@ dependencies {
     public void setContentTextColor(@ColorInt int contentTextColor);
     //查看更多字体颜色
     public void setHintTextColor(@ColorInt int hintTextColor);
-    //查看更多前面小图标
+    //查看更多前面小图标(夜间模式请更换对应图标，或者使用兼容主题的图标)
     public void setIndicateImage(@DrawableRes Drawable indicateImage);
     public void setIndicateImage(@DrawableRes int indicateImageRes);
 

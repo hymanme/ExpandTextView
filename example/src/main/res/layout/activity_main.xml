@@ -22,7 +22,9 @@
             app:contentTextSize="14sp"
             app:expandHint="点击展开"
             app:foldHint="点击收回"
-            app:indicateImage="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:textContentColor="?android:attr/textColorPrimary"
+            app:textHintColor="?android:attr/textColorPrimary"
+            app:textTitleColor="?android:attr/textColorSecondary"
             app:titleText="标题党"
             app:titleTextSize="16sp">
 

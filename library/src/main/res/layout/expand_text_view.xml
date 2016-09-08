@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:singleLine="true"
-        android:textColor="@color/secondary_text"
+        android:textColor="?android:textColorSecondary"
         android:textSize="16sp" />
 
     <TextView
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:lineSpacingExtra="6dp"
-        android:textColor="@color/primary_text"
+        android:textColor="?android:textColorPrimary"
         android:textIsSelectable="true"
         android:textSize="14sp" />
 
@@ -41,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="@color/white"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="5dp">
@@ -58,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:textColor="@color/primary_text"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="12sp" />
         </LinearLayout>
     </RelativeLayout>

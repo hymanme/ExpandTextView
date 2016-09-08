@@ -104,7 +104,6 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
         contentTextSize = a.getDimension(R.styleable.ExpandTextView_contentTextSize, DensityUtils.sp2px(mContext, DEFAULT_CONTENT_TEXT_SIZE));
         hintTextSize = a.getDimension(R.styleable.ExpandTextView_hintTextSize, DensityUtils.sp2px(mContext, DEFAULT_HINT_TEXT_SIZE));
         animationDuration = a.getInt(R.styleable.ExpandTextView_animationDuration, DEFAULT_ANIMATION_DURATION);
-        this.setBackgroundColor(getResources().getColor(R.color.white));
 
         a.recycle();
         init();
@@ -133,6 +132,9 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
         mHintView.setTextSize(TypedValue.COMPLEX_UNIT_PX, hintTextSize);
         mHintView.setTextColor(hintTextColor);
 
+        if (indicateImage == null) {
+            indicateImage = getResources().getDrawable(R.drawable.ic_arrow_down_light_round);
+        }
         mIndicateImage.setImageDrawable(indicateImage);
         mShowMore.setOnClickListener(this);
         ViewGroup.LayoutParams layoutParams = mContentView.getLayoutParams();
