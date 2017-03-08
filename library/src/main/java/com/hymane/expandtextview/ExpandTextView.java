@@ -325,6 +325,7 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
             copy = new TextView(mContext);
             copy.setTextSize(TypedValue.COMPLEX_UNIT_PX, contentTextSize);
             copy.setLineSpacing(DensityUtils.dp2px(mContext, 6), 1.0f);
+            copy.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             copy.setLines(minVisibleLines);
         }
         int width = mContentView.getMeasuredWidth();
