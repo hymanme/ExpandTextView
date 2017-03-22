@@ -330,6 +330,7 @@ public class ExpandTextView extends LinearLayout implements View.OnClickListener
         int width = mContentView.getMeasuredWidth();
         int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);
         int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec(1000, View.MeasureSpec.AT_MOST);
+        copy.setLayoutParams(mContentView.getLayoutParams());
         copy.measure(widthMeasureSpec, heightMeasureSpec);
         return copy.getMeasuredHeight();
     }
