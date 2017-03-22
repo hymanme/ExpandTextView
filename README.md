@@ -10,10 +10,11 @@ Add this to your build.gradle:
  
 ```
 	dependencies {
-	  compile 'com.hymane.expandtextview:library:1.0.1'
+	  compile 'com.hymane.expandtextview:library:1.0.3'
 	}
 ```
 ## 更新日志
+    3. 修复新版gradle编译之后点击展开崩溃
 	2. 兼容夜间模式,字体颜色请使用主题对应的颜色
 	1. 初版  
 ## 定义xml布局
