@@ -10,7 +10,7 @@ Add this to your build.gradle:
  
 ```
 	dependencies {
-	  compile 'com.hymane.expandtextview:library:1.0.3'
+	  compile 'com.hymane.expandtextview:library:1.0.2'
 	}
 ```
 ## 更新日志
